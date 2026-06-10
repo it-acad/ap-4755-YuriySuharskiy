@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <title>Деталі користувача</title>
+    </head>
+
+    <body>
+        <h1>Деталі користувача</h1>
+        <p>Ім'я: {{ user.first_name }}</p>
+        <p>Email: {{ user.email }}</p>
+        <a href="/auth/users/">Назад до списку користувачів</a>
+        <br>
+        <a href="/auth/logout/">Вийти</a>
+    </body>

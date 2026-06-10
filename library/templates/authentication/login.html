@@ -1,0 +1,18 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Вхід</title>
+</head>
+<body>
+    <h1>Вхід</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="email" name="email" placeholder="Email"><br>
+        <input type="password" name="password" placeholder="Пароль"><br>
+        <button type="submit">Увійти</button>
+    </form>
+    <a href="/auth/register/">Зареєструватись</a>
+    
+</body>
+</html>
+

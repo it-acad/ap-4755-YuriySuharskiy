@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Пошук книг</title>
+</head>
+<body>
+    <h1>Пошук книг</h1>
+    <form method="GET">
+        <input type="text" name="q" value="{{ query }}" placeholder="Назва книги">
+        <button type="submit">Шукати</button>
+    </form>
+    {% for book in books %}
+        <div>
+            <h3>{{ book.name }}</h3>
+            <p>{{ book.description }}</p>
+            <a href="/books/{{ book.id }}/">Детальніше</a>
+        </div>
+    {% endfor %}
+    <a href="/books/">Всі книги</a>
+    <a href="/auth/logout/">Вийти</a>
+</body>
+</html>

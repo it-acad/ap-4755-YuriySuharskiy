@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Реєстрація</title>
+</head>
+<body>
+    <h1>Реєстрація</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="username"><br>
+        <input type="email" name="email" placeholder="Email"><br>
+        <input type="password" name="password" placeholder="Пароль"><br>
+        <select name="role">
+            <option value="0">Гість</option>
+            <option value="1">Бібліотекар</option>
+        </select><br>
+        <button type="submit">Зареєструватись</button>
+    </form>
+    <p>
+        Вже маєте акаунт?
+        <a href="/auth/login/">Увійти</a>
+    </p>
+</body>
+</html>
+

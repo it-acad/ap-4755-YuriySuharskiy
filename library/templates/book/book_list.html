@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Список книг</title>
+</head>
+<body>
+    <h1>Список книг</h1>
+    <a href="/books/search/">Пошук</a>
+    {% for book in books %}
+        <div>
+            <h3>{{ book.name }}</h3>
+            <p>{{ book.description }}</p>
+            <p>Кількість: {{ book.count }}</p>
+            <a href="/books/{{ book.id }}/">Детальніше</a>
+        </div>
+    {% endfor %}
+    <a href="/auth/logout/">Вийти</a>
+</body>
+</html>
